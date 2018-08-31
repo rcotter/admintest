@@ -1,0 +1,17 @@
+{
+  "name": "BackOffice",
+  "author": "Autolotto Inc.",
+  "license": "ISC",
+  "private": "true",
+  "scripts": {
+    "build:production": "mustache app/config/config.production.json app/index.mustache index.html",
+    "build:staging": "mustache app/config/config.staging.json app/index.mustache index.staging.html",
+    "build:local": "mustache app/config/local.config.json app/index.mustache index.local.html",
+    "build": "yarn build:production & yarn build:staging & yarn build:local",
+    "build:watch": "nodemon -e json,mustache,css,lock -x 'yarn build'"
+  },
+  "dependencies": {
+    "mustache": "^2.3.2",
+    "nodemon": "^1.18.2"
+  }
+}

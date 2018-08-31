@@ -1,0 +1,4 @@
+{
+  "backendDomain": "http://localhost:3000",
+  "creamDomain": "http://localhost:9000"
+}
